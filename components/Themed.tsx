@@ -48,8 +48,9 @@ export function Icon(props: {
     name: React.ComponentProps<typeof FontAwesome>['name'];
     color: string;
     style?: StyleProp<TextStyle>;
+    size?: number;
 }) {
-    return <FontAwesome size={28} {...props} />;
+    return <FontAwesome size={props.size ?? 28} {...props} />;
 }
 
 type SearchInputProps = {
